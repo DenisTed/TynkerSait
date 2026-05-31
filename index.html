@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌟 Tynker Уроки 🌟</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#74ebd5,#9face6,#ffdde1);
+    overflow:hidden;
+}
+
+body::before{
+    content:'✨ ⭐ 🌈 🧩 🚀';
+    position:absolute;
+    font-size:40px;
+    width:100%;
+    text-align:center;
+    top:10%;
+    animation:float 8s infinite linear;
+    opacity:0.3;
+}
+
+@keyframes float{
+    0%{transform:translateX(-20px);}
+    50%{transform:translateX(20px);}
+    100%{transform:translateX(-20px);}
+}
+
+.container{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    text-align:center;
+    width:90%;
+    max-width:500px;
+}
+
+h1{
+    color:white;
+    margin-bottom:25px;
+    font-size:34px;
+    text-shadow:2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.btn{
+    text-decoration:none;
+    background:linear-gradient(45deg,#ff6ec4,#7873f5);
+    color:white;
+    padding:18px;
+    border-radius:18px;
+    font-size:22px;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    position:relative;
+    overflow:hidden;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 12px 28px rgba(0,0,0,0.35);
+}
+
+.btn::after{
+    content:"✨";
+    position:absolute;
+    right:15px;
+    opacity:0;
+    transition:0.3s;
+}
+
+.btn:hover::after{
+    opacity:1;
+    right:25px;
+}
+
+.footer{
+    margin-top:25px;
+    color:white;
+    font-size:14px;
+    opacity:0.9;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 Tynker Уроки</h1>
+
+    <div class="buttons">
+        <a class="btn" href="https://www.tynker.com/ide/v3?type=diy&p=58910b50af92316a528b45ee&content=24e361ff&cache=max&v=d7e85ca9-9e748b16-1c984702-f5-f1" target="_blank">
+            🎮 Гра 1
+        </a>
+
+        <a class="btn" href="https://www.tynker.com/ide/v3?type=diy&p=5890f58baf9231db368bfbcc&content=24e361ff&cache=max&v=d7e85ca9-9e748b16-1c984702-f5-f1" target="_blank">
+            🧩 Гра 2
+        </a>
+    </div>
+
+    <div class="footer">
+        ⭐ Натисни кнопку та відкрий пригоду ⭐
+    </div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll('.btn');
+
+buttons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        btn.style.transform='scale(0.95)';
+        setTimeout(()=>{
+            btn.style.transform='scale(1.08)';
+        },150);
+    });
+});
+</script>
+
+</body>
+</html>
