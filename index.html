@@ -6,134 +6,86 @@
 <title>🌟 Tynker Уроки 🌟</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    *{ margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#74ebd5,#9face6,#ffdde1);
-    overflow:hidden;
-}
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#74ebd5,#9face6,#ffdde1);
+        overflow:hidden;
+    }
 
-body::before{
-    content:'✨ ⭐ 🌈 🧩 🚀';
-    position:absolute;
-    font-size:40px;
-    width:100%;
-    text-align:center;
-    top:10%;
-    animation:float 8s infinite linear;
-    opacity:0.3;
-}
+    .container{
+        background:rgba(255,255,255,0.2);
+        backdrop-filter:blur(15px);
+        padding:40px;
+        border-radius:30px;
+        box-shadow:0 15px 40px rgba(0,0,0,0.2);
+        text-align:center;
+        width:90%;
+        max-width:500px;
+    }
 
-@keyframes float{
-    0%{transform:translateX(-20px);}
-    50%{transform:translateX(20px);}
-    100%{transform:translateX(-20px);}
-}
+    h1{ color:white; margin-bottom:25px; font-size:32px; text-shadow:2px 2px 6px rgba(0,0,0,0.3); }
 
-.container{
-    background:rgba(255,255,255,0.2);
-    backdrop-filter:blur(12px);
-    padding:40px;
-    border-radius:30px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
-    text-align:center;
-    width:90%;
-    max-width:500px;
-}
+    .buttons{ display:flex; flex-direction:column; gap:15px; }
 
-h1{
-    color:white;
-    margin-bottom:25px;
-    font-size:34px;
-    text-shadow:2px 2px 6px rgba(0,0,0,0.3);
-}
+    .btn{
+        text-decoration:none;
+        background:linear-gradient(45deg,#ff6ec4,#7873f5);
+        color:white;
+        padding:15px;
+        border-radius:15px;
+        font-size:18px;
+        font-weight:bold;
+        transition:0.3s;
+        box-shadow:0 8px 20px rgba(0,0,0,0.2);
+        display: block;
+    }
 
-.buttons{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
+    .btn:hover{ transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
 
-.btn{
-    text-decoration:none;
-    background:linear-gradient(45deg,#ff6ec4,#7873f5);
-    color:white;
-    padding:18px;
-    border-radius:18px;
-    font-size:22px;
-    font-weight:bold;
-    transition:0.3s;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
-    position:relative;
-    overflow:hidden;
-}
-
-.btn:hover{
-    transform:scale(1.08);
-    box-shadow:0 12px 28px rgba(0,0,0,0.35);
-}
-
-.btn::after{
-    content:"✨";
-    position:absolute;
-    right:15px;
-    opacity:0;
-    transition:0.3s;
-}
-
-.btn:hover::after{
-    opacity:1;
-    right:25px;
-}
-
-.footer{
-    margin-top:25px;
-    color:white;
-    font-size:14px;
-    opacity:0.9;
-}
+    .footer{ margin-top:25px; color:white; font-size:14px; }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🚀 Tynker Уроки</h1>
+    <h1>🚀 Tynker: Урок 2</h1>
 
     <div class="buttons">
-        <a class="btn" href="https://www.tynker.com/ide/v3?type=diy&p=58910b50af92316a528b45ee&content=24e361ff&cache=max&v=d7e85ca9-9e748b16-1c984702-f5-f1" target="_blank">
-            🎮 Гра 1
+        <a class="btn" href="https://www.tynker.com/ide/v3?type=course&slug=course:programming-100&chapter=0&lesson=3" target="_blank">
+            Завдання 1 🏃‍♂️
         </a>
 
-        <a class="btn" href="https://www.tynker.com/ide/v3?type=diy&p=5890f58baf9231db368bfbcc&content=24e361ff&cache=max&v=d7e85ca9-9e748b16-1c984702-f5-f1" target="_blank">
-            🧩 Гра 2
+        <a class="btn" href="https://www.tynker.com/ide/v3?type=course&slug=course:programming-100&chapter=0&lesson=7" target="_blank">
+            Завдання 2
         </a>
+        <a class="btn" href="https://www.tynker.com/ide/v3?type=course&slug=course:programming-100&chapter=0&lesson=8" target="_blank">
+            Завдання 3🎮
+        </a>
+        
+<a class="btn" href="https://www.tynker.com/ide/v3?type=diy&p=58910b9faf9231c2528b4633&content=24e361ff&cache=max&v=d7e85ca9-9e748b16-1c984702-f5-f1" target="_blank">
+            Завдання 4🎮
+        </a>
+        
     </div>
 
     <div class="footer">
-        ⭐ Натисни кнопку та відкрий пригоду ⭐
+        ⭐ Вибираємо що каже викладач! ⭐
     </div>
 </div>
 
 <script>
-const buttons = document.querySelectorAll('.btn');
-
-buttons.forEach(btn=>{
-    btn.addEventListener('click',()=>{
-        btn.style.transform='scale(0.95)';
-        setTimeout(()=>{
-            btn.style.transform='scale(1.08)';
-        },150);
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => { btn.style.transform = 'scale(1.05)'; }, 150);
+        });
     });
-});
 </script>
 
 </body>
